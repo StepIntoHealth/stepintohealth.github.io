@@ -55,32 +55,29 @@ tags: Get In Touch, Contact, Phone, Address, Jayne West, Qualification
                         <section>
                             <h2>Send me a message</h2>
                             <p>To send a message please complete the following information.</p>
-                            <!--
-                            @using (this.Html.BeginForm("contact", "home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                            {
-                                <div class="form-group">
-                                    @this.Html.AntiForgeryToken()
-                                    @this.Html.LabelFor(m => m.Name, new { @class = "col-sm-3 control-label" })
+                            <form action="http://formspree.io/west.rohan@gmail.com" class="form-horizontal" method="post" role="form">                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="Name">Name</label>
                                     <div class="col-sm-9">
-                                        @this.Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                                        <input class="form-control" data-val="true" data-val-required="The Name field is required." id="Name" name="Name" type="text" value="" />
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    @this.Html.LabelFor(m => m.Email, new { @class = "col-sm-3 control-label" })
+                                    <label class="col-sm-3 control-label" for="Email">Email</label>
                                     <div class="col-sm-9">
-                                        @this.Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                        <input class="form-control" data-val="true" data-val-required="The Email field is required." id="Email" name="Email" type="text" value="" />
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    @this.Html.LabelFor(m => m.Phone, new { @class = "col-sm-3 control-label" })
+                                    <label class="col-sm-3 control-label" for="Phone">Phone</label>
                                     <div class="col-sm-9">
-                                        @this.Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+                                        <input class="form-control" data-val="true" data-val-required="The Phone field is required." id="Phone" name="Phone" type="text" value="" />
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    @this.Html.LabelFor(m => m.Message, new { @class = "col-sm-3 control-label" })
+                                    <label class="col-sm-3 control-label" for="Message">Message</label>
                                     <div class="col-sm-9">
-                                        @this.Html.TextAreaFor(m => m.Message, new { @class = "form-control", rows = 6 })
+                                        <textarea class="form-control" cols="20" data-val="true" data-val-required="The Message field is required." id="Message" name="Message" rows="6">
+</textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -88,8 +85,7 @@ tags: Get In Touch, Contact, Phone, Address, Jayne West, Qualification
                                         <button type="submit" class="btn btn-default">Send</button>
                                     </div>
                                 </div>
-                            }
-                            -->
+</form>       
                         </section>
                     </div>
                 </div>
