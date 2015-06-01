@@ -96,6 +96,7 @@ tags: Get In Touch, Contact, Phone, Address, Jayne West, Qualification
 <script>
     $(function(){
         var form = $('#contactForm'), url = form.attr('action');
+        alert(form);
         $('#contactSubmitButton', form).click(function(e){
             e.preventDefault();
             alert(url);
