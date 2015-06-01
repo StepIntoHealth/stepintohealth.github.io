@@ -98,7 +98,11 @@ tags: Get In Touch, Contact, Phone, Address, Jayne West, Qualification
         var form = $('#contactForm'), url = form.attr('action');
         $('#contactSubmitButton', form).click(function(e){
             e.preventDefault();
-            $.post(url, form.serialize(), function(data){alert(data);}, 'json');
+            $.post(url, form.serialize(), function(data){        
+                var loc = location.href;
+                loc += loc.indexOf("?") === -1 ? "?" : "&";
+                location.href = loc + "sent=" + encodeURIComponent(data);
+            }, 'json');
         });
     });
 </script>
